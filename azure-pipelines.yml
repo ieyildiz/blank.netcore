@@ -54,3 +54,10 @@ steps:
 
 - task: PublishBuildArtifacts@1 # Create the articaft from publish
   displayName: 'blank.netcore - $(Build.BuildNumber)'
+
+- task: DownloadBuildArtifacts@1
+  displayName: Download
+  inputs:
+    buildType: current
+    artifactName: 'web.zip'
+    targetPath: $(System.ArtifactsDirectory)
