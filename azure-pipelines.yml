@@ -59,5 +59,4 @@ steps:
   displayName: Download
   inputs:
     buildType: current
-    artifactName: 'web.zip'
     targetPath: $(System.ArtifactsDirectory)
